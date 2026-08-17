@@ -18,9 +18,14 @@ description: Use when the user wants to preserve links or articles from WeChat c
 ## 主工作流
 
 1. 打开微信链接到浏览器。
-   - 使用 Computer Use 操作微信链接窗口，或从本地浏览器/微信可访问记录中识别链接。
+   - 优先使用非 Computer Use 的批量方式从微信链接窗口取 URL，避免持续占用用户前台：
+     - 如果微信辅助功能树直接暴露 `HTML 内容 ... URL:`，直接读取 URL。
+     - 如果只暴露顶部标签标题、不暴露 URL，使用 AppleScript 遍历微信网页窗口的标签：逐个选中标签，点开“更多”，点击描述为“复制链接”的菜单项，读取剪贴板。
+     - 批量复制前备份剪贴板；每个标签使用 sentinel 检查剪贴板是否真的更新；失败的单个标签单独重试；结束后恢复用户原剪贴板。
+     - 复制菜单项不要依赖固定序号，优先按 `description == "复制链接"` 查找；不同页面状态下菜单项顺序可能变化。
+   - 仅当 AppleScript/本地记录不可用时，才使用 Computer Use 操作微信链接窗口；如果用户正在并行工作，应避免 Computer Use 的逐次点击。
    - 优先打开到用户实际使用的浏览器配置，例如 `Microsoft Edge`，以复用登录态、扩展和 Obsidian Web Clipper。
-   - 记录本轮打开的链接数量、浏览器名称和大致标签范围。
+   - 将本轮链接打开到浏览器新窗口，不要混入旧窗口；记录链接数量、浏览器名称、新窗口标签范围，并保存一份临时 TSV 清单用于失败恢复。
 
 2. 暂停等待人工筛选。
    - 明确提醒用户：请手动关闭不值得剪存、重复、登录态失效或不需要保留的网页。
@@ -36,10 +41,10 @@ description: Use when the user wants to preserve links or articles from WeChat c
    - 从底部标签往上处理，避免关闭标签后索引移动影响未处理页面。
    - 微信公众号文章（`mp.weixin.qq.com/s...`）在触发 Web Clipper 前必须先完整滚动页面：从顶部滚到底部，等待懒加载图片和图片链接暴露，再回到顶部剪存。不要跳过这一步，否则图片容易在 Obsidian 中变成“图片”占位，PicGo 也无法接手转换。
    - 每个标签都必须先验证剪存成功，再关闭该标签。
-   - 对 Chromium 浏览器，优先复用现有脚本；脚本已包含微信公众号预滚动加载逻辑：
+   - 对 Chromium 浏览器，优先复用现有脚本；脚本已包含微信公众号预滚动加载逻辑。脚本可能位于 `.agents` 或 `.codex`，先用 `rg --files ~/.agents/skills ~/.codex/skills | rg 'clip_chromium_tabs\.zsh$'` 定位，不要假设固定路径。
 
 ```bash
-/Users/gbs00/.codex/skills/obsidian-auto-clip/scripts/clip_chromium_tabs.zsh \
+/Users/gbs00/.agents/skills/obsidian-auto-clip/scripts/clip_chromium_tabs.zsh \
   "Microsoft Edge" \
   <start-tab-index> \
   <end-tab-index> \
@@ -124,6 +129,24 @@ description: Use when the user wants to preserve links or articles from WeChat c
 2. 在整个 Obsidian vault 中搜索来源 URL。
 3. 若仍找不到，重新打开原 URL，重新剪存并单独核验。
 
+### Web Clipper 快捷键触发但未落盘
+
+症状：
+
+- 浏览器已经在前台，Obsidian 正在运行，Obsidian Web Clipper 扩展已安装。
+- Edge/Chrome 扩展配置里 `Alt+Shift+O` / `Option+Shift+O` 仍是快速剪藏。
+- 脚本已切到目标标签并触发快捷键，但等待 20-30 秒后，目标文件夹没有新文件，也搜不到来源 URL。
+
+处理：
+
+1. 不关闭原浏览器标签。
+2. 先确认不是焦点问题：检查前台应用是否为目标浏览器；若不是，激活浏览器后重试一次。
+3. 确认不是路径问题：用来源 URL、去掉 query/hash 的规范化 URL、以及整个 vault 搜索一遍。
+4. 若仍未落盘，判定为“快捷键触发未被扩展接收或扩展未完成写入”，不要无限重试。
+5. 可使用稳定兜底写入 Markdown：用 Defuddle 或页面 HTML 提取正文；微信公众号要额外从 `#js_content` 的 `data-src/src` 收集远程图片 URL，并补入 Markdown 图片链接；不要下载本地图片。
+6. 兜底文件必须带 frontmatter `title`、`source`、`tags: [clippings]`，正文必须包含原始来源 URL。
+7. 兜底后仍按来源 URL、文件大小、空图片、公众号图片链接复验；通过后汇报这是兜底结果，并保留原浏览器标签，除非用户明确允许关闭。
+
 ### 浏览器或扩展页不允许 Computer Use 操作
 
 不要强行用可视化点击操作扩展弹窗。改用：
@@ -152,12 +175,14 @@ description: Use when the user wants to preserve links or articles from WeChat c
 
 ```text
 请使用微信 Obsidian 剪存流程：
-1. 先把微信链接窗口里的内容全部打开到 Microsoft Edge。
-2. 打开后暂停，等我人工关闭重复、不值得剪存或不需要的网页。
-3. 我说“继续”后，只处理浏览器里剩下的本轮网页。
-4. 通过 Obsidian Web Clipper 剪存到 00-收集箱Inbox/Clippings。
-5. 微信公众号文章剪存前先完整滚动到底部加载图片和图片链接，再回到顶部剪存。
-6. 每个网页都要用来源 URL 校验剪存文件，微信公众号文章还要检查是否有“图片”断图占位；校验成功后再关闭标签。
-7. 如果遇到空笔记、微信页提取失败、图片占位、链接规范化或插件异常，按异常处理流程重试并保留失败标签。
-8. 最后告诉我成功剪存数量、遗漏数量、残留标签、图片异常和是否生成过空笔记。
+1. 先用非 Computer Use 的批量方式从微信链接窗口获取 URL：能直接读 URL 就直接读；否则用 AppleScript 逐个标签点“更多 → 复制链接”，备份并恢复剪贴板，不要逐次调用 Computer Use 干扰我工作。
+2. 把这批 URL 打开到 Microsoft Edge 的新窗口，不要混入旧窗口。
+3. 打开后暂停，等我人工关闭重复、不值得剪存或不需要的网页。
+4. 我说“继续”后，只处理浏览器里剩下的本轮网页。
+5. 通过 Obsidian Web Clipper 剪存到 00-收集箱Inbox/Clippings。
+6. 微信公众号文章剪存前先完整滚动到底部加载图片和图片链接，再回到顶部剪存。
+7. 每个网页都要用来源 URL 校验剪存文件，微信公众号文章还要检查是否有“图片”断图占位；校验成功后再关闭标签。
+8. 如果 Web Clipper 快捷键触发但 20-30 秒内没有落盘，先诊断焦点、扩展、路径和 URL 规范化；仍失败时保留标签并可用远程图链 Markdown 兜底。
+9. 如果遇到空笔记、微信页提取失败、图片占位、链接规范化或插件异常，按异常处理流程重试并保留失败标签。
+10. 最后告诉我成功剪存数量、遗漏数量、残留标签、图片异常、是否生成过空笔记，以及是否使用过兜底写入。
 ```
