@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信 Obsidian 剪存"
+  short_description: "将微信聊天链接窗口打开到浏览器，经人工筛选后用 Obsidian Web Clipper 批量剪存并核验。"
+  default_prompt: "请使用微信 Obsidian 剪存流程：先把微信链接窗口中的内容打开到浏览器，等我人工关闭不需要或重复的网页后，再用 Obsidian Web Clipper 剪存剩余网页并逐条核验。"
