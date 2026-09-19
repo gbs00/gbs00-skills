@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "2bbf6bf7-1aba-45ea-9b98-f46571734173",
+  "path": "obsidian-auto-clip",
+  "path_key": "obsidian-auto-clip",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

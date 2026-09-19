@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "5524841a-4c4d-4631-adb4-6ad1b9d15628",
+  "path": "hyperframes-cli",
+  "path_key": "hyperframes-cli",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

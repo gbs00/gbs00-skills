@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "f8f5e537-96cf-437a-811a-fcc228157bb2",
+  "path": "tailwind",
+  "path_key": "tailwind",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

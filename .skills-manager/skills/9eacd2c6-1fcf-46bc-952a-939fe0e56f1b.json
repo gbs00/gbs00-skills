@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "9eacd2c6-1fcf-46bc-952a-939fe0e56f1b",
+  "path": "wechat-obsidian-clip",
+  "path_key": "wechat-obsidian-clip",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

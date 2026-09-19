@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "835a62d5-5de3-48b1-89c9-39d2e9afd956",
+  "path": "css-animations",
+  "path_key": "css-animations",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "ec432b59-7716-4a52-9ec7-937c7bc45712",
+  "path": "lottie",
+  "path_key": "lottie",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

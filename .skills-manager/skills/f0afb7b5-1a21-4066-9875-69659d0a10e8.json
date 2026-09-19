@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "f0afb7b5-1a21-4066-9875-69659d0a10e8",
+  "path": "energy-manage",
+  "path_key": "energy-manage",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

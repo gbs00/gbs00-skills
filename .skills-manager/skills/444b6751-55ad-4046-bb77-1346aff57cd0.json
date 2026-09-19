@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "444b6751-55ad-4046-bb77-1346aff57cd0",
+  "path": "waapi",
+  "path_key": "waapi",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "skill_id": "6b1583bc-2e92-435a-b875-d60133e73650",
+  "path": "boss-zhipin-lark-base",
+  "path_key": "boss-zhipin-lark-base",
+  "enabled": true,
+  "tags": [],
+  "source": {
+    "type": "import",
+    "ref": null,
+    "subpath": null,
+    "branch": null
+  }
+}
