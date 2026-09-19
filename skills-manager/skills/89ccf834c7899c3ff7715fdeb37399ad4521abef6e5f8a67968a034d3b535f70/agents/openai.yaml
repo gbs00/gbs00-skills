@@ -1,7 +1,0 @@
-interface:
-  display_name: "BOSS 直聘记录"
-  short_description: "把置顶沟通写入飞书 Base 并安全取消置顶"
-  default_prompt: "Use $boss-zhipin-lark-base to process BOSS 直聘 pinned chats and write them into the target Lark Base."
-
-policy:
-  allow_implicit_invocation: true
