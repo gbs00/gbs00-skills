@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "89ccf834c7899c3ff7715fdeb37399ad4521abef6e5f8a67968a034d3b535f70",
+      "name": "boss-zhipin-lark-base",
+      "description": "Process menu-confirmed pinned conversations in the user's logged-in BOSS 直聘 / zhipin.com Chrome session, extract complete chat and job-detail data, create and verify one Lark/Feishu Base record per conversation, and safely unpin only after read-back verification. Use for BOSS pinned-chat logging, interrupted-run recovery, or BOSS-to-Lark Base automations.",
+      "folderName": "boss-zhipin-lark-base",
+      "hash": "296c790cb69b3e8658d14c242ec143959e5d6ccfcef9cb8d9bb973db974c9726",
+      "path": ""
+    },
+    {
+      "id": "ae262d87444a330494aa6faf277dd8cd410eff427fcea38e9515a021d425ec83",
+      "name": "wechat-obsidian-clip",
+      "description": "Use when the user wants to preserve links or articles from WeChat chats by opening the WeChat link window into a real browser, pausing for the user to manually close duplicates or low-value pages, then clipping the remaining browser tabs into Obsidian with Obsidian Web Clipper and verifying every selected source URL.",
+      "folderName": "wechat-obsidian-clip",
+      "hash": "be3ec86f109d7f25af406dca210d2e1c5ae1cb95b62a0b606f47fdb8cd5309cf",
+      "path": ""
+    },
+    {
+      "id": "f211813f5e1ece9775b0bbf3c2e085a92eda89d4186247be601ddce2f203512e",
+      "name": "baoyu-translate",
+      "description": "Translates articles and documents between languages with three modes - quick (direct), normal (analyze then translate), and refined (analyze, translate, review, polish). Supports custom glossaries and terminology consistency via EXTEND.md. Use when user asks to \"translate\", \"翻译\", \"精翻\", \"translate article\", \"translate to Chinese/English\", \"改成中文\", \"改成英文\", \"convert to Chinese\", \"localize\", \"本地化\", or needs any document translation. Also triggers for \"refined translation\", \"精细翻译\", \"proofread translation\", \"快速翻译\", \"快翻\", \"这篇文章翻译一下\", or when a URL or file is provided with translation intent.",
+      "folderName": "baoyu-translate",
+      "hash": "5b1930ef5dbc4f1736f3d70e318dba4cd37c372230164e36d3cf084f1ce89810",
+      "path": ""
+    },
+    {
+      "id": "bea490873f5aa97b305063e59476509c743dc3e40b1af63dc91affff004b65f2",
+      "name": "follow-builders",
+      "description": "AI builders digest — monitors top AI builders on X and YouTube podcasts, remixes their content into digestible summaries. Use when the user wants AI industry insights, builder updates, or invokes /ai. No API keys or dependencies required — all content is fetched from a central feed.",
+      "folderName": "follow-builders",
+      "hash": "324be0471f74c26bddbf6f98aec05e6553b63341208dffdc083353b0bac6ea40",
+      "path": ""
+    },
+    {
+      "id": "9838c6a00b63529dc407aaf3f8ebf25f769989c3cee0a52341acfde9be6d5715",
+      "name": "grilling",
+      "description": "Run an interactive critical interview about a plan, decision, or idea when the user wants to be grilled or explicitly wants a question-and-answer stress test. Do not use for ordinary reviews, audits, or requests to implement an already agreed plan.",
+      "folderName": "grilling",
+      "hash": "4bf395128897429f5f5afd578a68dc4ca4d4b327397b45e4700582d6d7fb9f40",
+      "path": ""
+    },
+    {
+      "id": "162d2d01ae6692e36c3bba8e41dcc3644a398f5f0e8b0ca68ee067e16d868edf",
+      "name": "hyperframes",
+      "description": "Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For CLI commands (init, lint, preview, render, transcribe, tts) see the hyperframes-cli skill.",
+      "folderName": "hyperframes",
+      "hash": "a138f692ab45170fe1f46ade82ae2fd804f9548f02923f65f8df7af0bab35f2b",
+      "path": ""
+    },
+    {
+      "id": "565f282ab69fcfdc59f427e3b61f54d41360cedcd3fa361226e5f83b90abf23c",
+      "name": "lark-base",
+      "description": "当需要用 lark-cli 操作飞书多维表格（Base）时调用：适用于建表、字段管理、记录读写、视图配置、历史查询，以及角色/表单/仪表盘管理；也适用于把旧的 +table / +field / +record 写法改成当前命令写法。涉及字段设计、公式字段、查找引用、跨表计算、行级派生指标、数据分析需求时也必须使用本 skill。",
+      "folderName": "lark-base",
+      "hash": "752cf18e68aa33b5463aa4d2b0897b92d294735e6bd2541854dd7c1ea68df071",
+      "path": ""
+    },
+    {
+      "id": "3b2db206373410ce0f356a8ac92a66079cbd8a76d5c6eedcecb39525c56ce443",
+      "name": "lark-calendar",
+      "description": "飞书日历（calendar）：提供日历与日程（会议）的全面管理能力。核心场景包括：查看/搜索日程、创建/更新日程、管理参会人、查询忙闲状态及推荐空闲时段。高频操作请优先使用 Shortcuts：+agenda（快速概览今日/近期行程）、+create（创建日程并按需邀请参会人）、+freebusy（查询用户主日历的忙闲信息和rsvp的状态）、+suggestion（针对时间未确定的预约日程需求，提供多个时间推荐方案）。",
+      "folderName": "lark-calendar",
+      "hash": "755e572b76dbac2c86849833d0b66295c75e832765eb3ea17ccff6063792e958",
+      "path": ""
+    },
+    {
+      "id": "862ae639b23e4256b9bd9e9591a60bc061a9d033a51601ff33287546d9c9f271",
+      "name": "lark-doc",
+      "description": "飞书云文档：创建和编辑飞书文档。从 Markdown 创建文档、获取文档内容、更新文档（追加/覆盖/替换/插入/删除）、上传和下载文档中的图片和文件、搜索云空间文档。当用户需要创建或编辑飞书文档、读取文档内容、在文档中插入图片、搜索云空间文档时使用；如果用户是想按名称或关键词先定位电子表格、报表等云空间对象，也优先使用本 skill 的 docs +search 做资源发现。",
+      "folderName": "lark-doc",
+      "hash": "6caa781f70bafc512a1349dac78d04e09695ecf76f0588df9ef825d347dd8253",
+      "path": ""
+    },
+    {
+      "id": "7570023f77a9740d8fbd7c373410053863c5b1eb33ffa25cd88f559ecc13f811",
+      "name": "lark-drive",
+      "description": "飞书云空间：管理云空间中的文件和文件夹。上传和下载文件、创建文件夹、复制/移动/删除文件、查看文件元数据、管理文档评论、管理文档权限、订阅用户评论变更事件。当用户需要上传或下载文件、整理云空间目录、查看文件详情、管理评论、管理文档权限、订阅用户评论变更事件时使用。",
+      "folderName": "lark-drive",
+      "hash": "a09a8dad080b7902269814ae209716420a5289790d986e1a3f1e5912d1c0d615",
+      "path": ""
+    },
+    {
+      "id": "870d45c29d4d09746eea84e27abf7e0925fcf04425f59bd98076280d770d1b4f",
+      "name": "lark-mail",
+      "description": "飞书邮箱 — draft, compose, send, reply, forward, read, and search emails; manage drafts, folders, labels, contacts, and attachments. Use when user mentions 起草邮件, 写一封邮件, 拟邮件, 草稿, 发通知邮件, 发送邮件, 发邮件, 回复邮件, 转发邮件, 查看邮件, 看邮件, 读邮件, 搜索邮件, 查邮件, 收件箱, 邮件会话, 编辑草稿, 管理草稿, 下载附件, 邮件文件夹, 邮件标签, 邮件联系人, 监听新邮件, draft, compose, send email, reply, forward, inbox, mail thread.",
+      "folderName": "lark-mail",
+      "hash": "820a6e9679b54f42cfb7e40376fe1a34b8282b2421a1a865017f90f70cba9cb6",
+      "path": ""
+    },
+    {
+      "id": "fa6ddd768b7678e1b184ac19e2e2255a38307f333b47b2b3784fb5eaa5d4736a",
+      "name": "lark-openapi-explorer",
+      "description": "飞书/Lark 原生 OpenAPI 探索：从官方文档库中挖掘未经 CLI 封装的原生 OpenAPI 接口。当用户的需求无法被现有 lark-* skill 或 lark-cli 已注册命令满足，需要查找并调用原生飞书 OpenAPI 时使用。",
+      "folderName": "lark-openapi-explorer",
+      "hash": "6c9480efb31f03853fa7f6bc176495cd64d9a9b2d4f532147ab280bec04dabf2",
+      "path": ""
+    },
+    {
+      "id": "67a2dbc61685f5dd17a0fda6c2858a6772296e37a3591f7c54606852d68d94da",
+      "name": "lark-shared",
+      "description": "飞书/Lark CLI 共享基础：应用配置初始化、认证登录（auth login）、身份切换（--as user/bot）、权限与 scope 管理、Permission denied 错误处理、安全规则。当用户需要第一次配置(`lark-cli config init`)、使用登录授权(`lark-cli auth login`)、遇到权限不足、切换 user/bot 身份、配置 scope、或首次使用 lark-cli 时触发。",
+      "folderName": "lark-shared",
+      "hash": "cdc024065afb8ee48e09e175d0d41717750dd181cf81110fa1fad58e1d6e49c3",
+      "path": ""
+    },
+    {
+      "id": "c6332b4a8150770250cfe55a1e96e5b9323178643b955be049723c9713400ee2",
+      "name": "lark-sheets",
+      "description": "飞书电子表格：创建和操作电子表格。创建表格并写入表头和数据、读取和写入单元格、追加行数据、在已知电子表格中查找单元格内容、导出表格文件。当用户需要创建电子表格、批量读写数据、在已知表格中查找内容、导出或下载表格时使用。若用户是想按名称或关键词搜索云空间里的表格文件，请改用 lark-doc 的 docs +search 先定位资源。",
+      "folderName": "lark-sheets",
+      "hash": "e75f9ee0172806cd7a437c48f2829fccd69c75450f8c589684ccb521e5385ffe",
+      "path": ""
+    },
+    {
+      "id": "caf8e51ecf888fffc15ce9bc59d868abfd16ab8589787c167fc0e8abe3fbe2d0",
+      "name": "lark-skill-maker",
+      "description": "创建 lark-cli 的自定义 Skill。当用户需要把飞书 API 操作封装成可复用的 Skill（包装原子 API 或编排多步流程）时使用。",
+      "folderName": "lark-skill-maker",
+      "hash": "b1b5b0de6c4322c3ef76c923fe107e74392d95fa113a750d35a11d4e5fd4368b",
+      "path": ""
+    },
+    {
+      "id": "3c81469afffe4cc804f7c52fed96b905e8f0380d0aa19c17b7316208a8a01591",
+      "name": "obsidian-auto-clip",
+      "description": "Use when the user wants to batch clip browser tabs into Obsidian with Obsidian Web Clipper, especially when they provide a target browser and a rule for which tabs to clip and close.",
+      "folderName": "obsidian-auto-clip",
+      "hash": "8652ab7fb9a7865f6ce3a93ea88e689036984733296c258492939c71d7c7aeee",
+      "path": ""
+    },
+    {
+      "id": "059c6e69b890db45837d4eace71536870445bb7b10034dad2719b846d639c7f3",
+      "name": "website-to-hyperframes",
+      "description": "Capture a website and create a HyperFrames video from it. Use when a URL is provided with explicit video intent, such as \"turn this into a video\", \"make a promo from my site\", or a video-based social ad/product tour. A bare URL, a request to read or analyze a page, or software installation instructions are not triggers.",
+      "folderName": "website-to-hyperframes",
+      "hash": "2c150786ba1cd0230c8c3032e243f85ef70d0ecf129efdbc549676f349dc0d15",
+      "path": ""
+    },
+    {
+      "id": "bee4c4a4ce7a0a0b1b5c1ff232bbe761f9036f6c8fccc68de5aaf19d7db9fbca",
+      "name": "微信读书",
+      "description": "微信读书助手 — 搜索书籍、管理书架、查看笔记划线、浏览书评、阅读统计、发现推荐好书",
+      "folderName": "weread-skills",
+      "hash": "cb44764d49700753db1d69599dcd44fed93d976f0cfa5bf0b1c0a8fc72d569cc",
+      "path": ""
+    }
+  ]
+}

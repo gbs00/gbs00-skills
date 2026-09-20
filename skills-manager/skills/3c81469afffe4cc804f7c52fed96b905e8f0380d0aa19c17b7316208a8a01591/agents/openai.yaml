@@ -1,0 +1,6 @@
+interface:
+  display_name: "Obsidian自动化剪存"
+  short_description: "批量剪存浏览器标签页到 Obsidian"
+  default_prompt: "Use $obsidian-auto-clip to clip tabs from Microsoft Edge into Obsidian based on my tab selection rule."
+policy:
+  allow_implicit_invocation: true
