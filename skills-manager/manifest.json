@@ -2,22 +2,6 @@
   "version": 1,
   "skills": [
     {
-      "id": "89ccf834c7899c3ff7715fdeb37399ad4521abef6e5f8a67968a034d3b535f70",
-      "name": "boss-zhipin-lark-base",
-      "description": "Process menu-confirmed pinned conversations in the user's logged-in BOSS 直聘 / zhipin.com Chrome session, extract complete chat and job-detail data, create and verify one Lark/Feishu Base record per conversation, and safely unpin only after read-back verification. Use for BOSS pinned-chat logging, interrupted-run recovery, or BOSS-to-Lark Base automations.",
-      "folderName": "boss-zhipin-lark-base",
-      "hash": "296c790cb69b3e8658d14c242ec143959e5d6ccfcef9cb8d9bb973db974c9726",
-      "path": ""
-    },
-    {
-      "id": "ae262d87444a330494aa6faf277dd8cd410eff427fcea38e9515a021d425ec83",
-      "name": "wechat-obsidian-clip",
-      "description": "Use when the user wants to preserve links or articles from WeChat chats by opening the WeChat link window into a real browser, pausing for the user to manually close duplicates or low-value pages, then clipping the remaining browser tabs into Obsidian with Obsidian Web Clipper and verifying every selected source URL.",
-      "folderName": "wechat-obsidian-clip",
-      "hash": "be3ec86f109d7f25af406dca210d2e1c5ae1cb95b62a0b606f47fdb8cd5309cf",
-      "path": ""
-    },
-    {
       "id": "f211813f5e1ece9775b0bbf3c2e085a92eda89d4186247be601ddce2f203512e",
       "name": "baoyu-translate",
       "description": "Translates articles and documents between languages with three modes - quick (direct), normal (analyze then translate), and refined (analyze, translate, review, polish). Supports custom glossaries and terminology consistency via EXTEND.md. Use when user asks to \"translate\", \"翻译\", \"精翻\", \"translate article\", \"translate to Chinese/English\", \"改成中文\", \"改成英文\", \"convert to Chinese\", \"localize\", \"本地化\", or needs any document translation. Also triggers for \"refined translation\", \"精细翻译\", \"proofread translation\", \"快速翻译\", \"快翻\", \"这篇文章翻译一下\", or when a URL or file is provided with translation intent.",
@@ -143,6 +127,22 @@
       "description": "微信读书助手 — 搜索书籍、管理书架、查看笔记划线、浏览书评、阅读统计、发现推荐好书",
       "folderName": "weread-skills",
       "hash": "cb44764d49700753db1d69599dcd44fed93d976f0cfa5bf0b1c0a8fc72d569cc",
+      "path": ""
+    },
+    {
+      "id": "89ccf834c7899c3ff7715fdeb37399ad4521abef6e5f8a67968a034d3b535f70",
+      "name": "boss-zhipin-lark-base",
+      "description": "Process menu-confirmed pinned conversations in the user's logged-in BOSS 直聘 / zhipin.com Chrome session, extract complete chat and job-detail data, create and verify one Lark/Feishu Base record per conversation, and safely unpin only after read-back verification. Use for BOSS pinned-chat logging, interrupted-run recovery, or BOSS-to-Lark Base automations.",
+      "folderName": "boss-zhipin-lark-base",
+      "hash": "296c790cb69b3e8658d14c242ec143959e5d6ccfcef9cb8d9bb973db974c9726",
+      "path": ""
+    },
+    {
+      "id": "ae262d87444a330494aa6faf277dd8cd410eff427fcea38e9515a021d425ec83",
+      "name": "wechat-obsidian-clip",
+      "description": "Use when the user wants to preserve links or articles from WeChat chats by opening the WeChat link window into a real browser, pausing for the user to manually close duplicates or low-value pages, then clipping the remaining browser tabs into Obsidian with Obsidian Web Clipper and verifying every selected source URL.",
+      "folderName": "wechat-obsidian-clip",
+      "hash": "be3ec86f109d7f25af406dca210d2e1c5ae1cb95b62a0b606f47fdb8cd5309cf",
       "path": ""
     }
   ]
