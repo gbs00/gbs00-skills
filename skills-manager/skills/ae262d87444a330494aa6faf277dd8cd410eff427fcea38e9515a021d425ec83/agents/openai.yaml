@@ -1,4 +1,4 @@
 interface:
   display_name: "微信 Obsidian 剪存"
-  short_description: "将微信聊天链接窗口打开到浏览器，经人工筛选后用 Obsidian Web Clipper 批量剪存并核验。"
-  default_prompt: "请使用微信 Obsidian 剪存流程：先把微信链接窗口中的内容打开到浏览器，等我人工关闭不需要或重复的网页后，再用 Obsidian Web Clipper 剪存剩余网页并逐条核验。"
+  short_description: "将本轮微信文章用 Web Clipper 剪存到 Obsidian，去重续跑并核验正文图片。"
+  default_prompt: "请使用 $wechat-obsidian-clip 剪存本轮文章；已在浏览器打开的直接处理，默认保留源标签，核验正文与图片并跳过已有剪存。"

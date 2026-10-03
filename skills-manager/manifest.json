@@ -140,9 +140,9 @@
     {
       "id": "ae262d87444a330494aa6faf277dd8cd410eff427fcea38e9515a021d425ec83",
       "name": "wechat-obsidian-clip",
-      "description": "Use when the user wants to preserve links or articles from WeChat chats by opening the WeChat link window into a real browser, pausing for the user to manually close duplicates or low-value pages, then clipping the remaining browser tabs into Obsidian with Obsidian Web Clipper and verifying every selected source URL.",
+      "description": "Preserve user-selected WeChat articles and shared links in Obsidian through Obsidian Web Clipper. Route already-open browser articles directly to clipping, or transfer WeChat links and pause for selection first; verify source, full content and images, and resume without duplicate saves.",
       "folderName": "wechat-obsidian-clip",
-      "hash": "be3ec86f109d7f25af406dca210d2e1c5ae1cb95b62a0b606f47fdb8cd5309cf",
+      "hash": "db876b2d571507cde5393c031fbc584a4807e96fb2f02d90a457c037e9bbfcbd",
       "path": ""
     }
   ]
